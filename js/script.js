@@ -21,7 +21,7 @@ $('.partners-block').slick({
     prevArrow: `<button class="prev-partners"><i class="fas fa-chevron-left"></i></button>`,
     nextArrow: `<button class="next-partners"><i class="fas fa-chevron-right"></i></button>`,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 5000,
