@@ -16,6 +16,17 @@ $('#reviews').slick({
     autoplaySpeed: 5000,
 });
 
+$('.partners-block').slick({
+    dots: true,
+    prevArrow: `<button class="prev-partners"><i class="fas fa-chevron-left"></i></button>`,
+    nextArrow: `<button class="next-partners"><i class="fas fa-chevron-right"></i></button>`,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 5000,
+});
+
 
 // -------------- FOR DEFAULT INPUT FUNCTION -------------------
 

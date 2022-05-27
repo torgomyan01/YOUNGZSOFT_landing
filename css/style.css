@@ -490,14 +490,26 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
-  .form-block .left-green {
+  .form-block .left-green, .form-block .right-green {
     width: 50%;
     height: 100%;
     background: rgba(28, 155, 85, 0.5);
     -webkit-backdrop-filter: blur(25px);
-            backdrop-filter: blur(25px);
-    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+            backdrop-filter: blur(25px); }
+    .form-block .left-green form, .form-block .right-green form {
+      width: 100%;
+      max-width: 25rem; }
+  .form-block.right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .form-block .left-green {
     padding: 1.875rem 1.875rem 1.875rem 6.375rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -507,7 +519,175 @@ header {
             justify-content: start;
     -webkit-box-align: center;
         -ms-flex-align: center;
+            align-items: center;
+    -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%); }
+  .form-block .right-green {
+    padding: 1.875rem 6.875rem 1.875rem 1.375rem;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
             align-items: center; }
-    .form-block .left-green form {
-      width: 100%;
-      max-width: 25rem; }
+
+.info-block-site {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 6.875rem rgba(111, 111, 111, 0.25);
+          box-shadow: 0 0 6.875rem rgba(111, 111, 111, 0.25);
+  border-radius: 10px;
+  position: relative;
+  padding: 4.375rem 0.875rem 2rem; }
+  .info-block-site .icon-block {
+    width: 6.5625rem;
+    height: 6.5625rem;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%; }
+  .info-block-site h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000; }
+  .info-block-site .text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #000000; }
+
+.col-2-4 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc((100% / 12) * 2.4 - 0rem); }
+  @media (max-width: 1400px) {
+    .col-2-4 {
+      width: calc((100% / 12) * 4 - 0rem); } }
+  @media (max-width: 992px) {
+    .col-2-4 {
+      width: calc((100% / 12) * 6 - 0rem); } }
+  @media (max-width: 576px) {
+    .col-2-4 {
+      width: calc((100% / 12) * 12 - 0rem); } }
+
+.container.max-container {
+  max-width: 1600px; }
+
+.def-textarea {
+  width: 100%;
+  height: auto;
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 10px;
+  color: #fff;
+  resize: none; }
+  .def-textarea::-webkit-input-placeholder {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px; }
+  .def-textarea:-ms-input-placeholder {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px; }
+  .def-textarea::-ms-input-placeholder {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px; }
+  .def-textarea::placeholder {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px; }
+
+.partners-block {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .partners-block .item {
+    width: 9.375rem;
+    height: 9.375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .partners-block .item .logo-partners {
+      width: 9.375rem;
+      height: 9.375rem;
+      border-radius: 50%;
+      overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+
+.prev-partners, .next-partners {
+  width: 2.5rem;
+  height: 12.5rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1C9B55;
+  position: absolute;
+  border: 0;
+  cursor: pointer !important;
+  z-index: 10; }
+
+.prev-partners {
+  left: 0;
+  -webkit-box-shadow: 5px 0 9px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 0 9px -5px rgba(0, 0, 0, 0.25); }
+
+.next-partners {
+  -webkit-box-shadow: -5px 0px 9px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: -5px 0px 9px -5px rgba(0, 0, 0, 0.25);
+  right: 0; }
