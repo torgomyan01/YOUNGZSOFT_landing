@@ -27,6 +27,62 @@ $('.partners-block').slick({
     autoplaySpeed: 5000,
 });
 
+let sett = true;
+const ourWorksBlock = $('#our-works');
+$(window).on('scroll', function (e){
+
+    if($(e.target).scrollTop() > ourWorksBlock.offset().top - 200 && sett){
+        startNumberAnimation();
+        sett = false;
+    }
+})
+
+function startNumberAnimation(){
+    const numberAnimation = $('.number-animation');
+    numberAnimation.map((index, elem) => {
+        const _elem = $(elem);
+        const maxCount = +_elem.text();
+        const time = _elem.data('time') ? +_elem.data('time') : 5;
+
+        const ms = time * 50;
+
+        const secCount = maxCount / ms;
+
+        let num = 0;
+
+
+        const interval = setInterval(() => {
+
+            num += secCount;
+
+            _elem.text(num.toFixed());
+
+            if(num > maxCount){
+                clearInterval(interval)
+            }
+        }, 1)
+
+
+        console.log(maxCount, time)
+    })
+}
+
+
+
+
+const menuSite = $('#menu-site');
+
+menuSite.on('click', function (){
+    const parent = $(this).parent();
+    if(parent.hasClass(active)){
+        parent.removeClass(active);
+        $(this).html('<i class="fa-solid fa-bars"></i>');
+    } else {
+        parent.addClass(active);
+        $(this).html('<i class="fa-solid fa-xmark"></i>');
+    }
+})
+
 
 // -------------- FOR DEFAULT INPUT FUNCTION -------------------
 
