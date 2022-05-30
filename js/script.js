@@ -73,8 +73,6 @@ const logoSite = $('.logo-header');
 $(window).on('scroll', function (e){
     const scrollTop = $(e.target).scrollTop();
     eventLogo(scrollTop);
-
-
     if(scrollTop > ourWorksBlock.offset().top - 300 && sett){
         startNumberAnimation();
         sett = false;
@@ -90,9 +88,9 @@ $(window).on('load', function (e){
 
 function eventLogo(scrollTop){
     if(scrollTop > 200){
-        logoSite.children('.logo-closed-symbol').addClass('close')
+        logoSite.children('.logo-closed-symbol').addClass('close');
     } else {
-        logoSite.children('.logo-closed-symbol').removeClass('close')
+        logoSite.children('.logo-closed-symbol').removeClass('close');
     }
 }
 

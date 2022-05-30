@@ -744,8 +744,28 @@ header{
 
 .need-help{
   width: 70%;
+  padding: 1.875rem 2.875rem 1.875rem 13% !important;
   @media (max-width: $md){
     width: 100%;
+  }
+}
+
+.sales{
+  width: 100%;
+  height: 31.25rem;
+  @include bg;
+  @include flex('c', 'c');
+  clip-path: polygon(0 0, 0 100%, 50% 85%, 100% 100%, 100% 0, 50% 15%);
+  @media (max-width: $sm){
+    height: 40.25rem;
+    clip-path: polygon(0 0, 0 100%, 50% 95%, 100% 100%, 100% 0, 50% 5%);
+  }
+  .solid{
+    width: 100%;
+    height: 100%;
+    background: rgba(28, 155, 85, 0.5);
+    backdrop-filter: blur(25px);
+    @include flex('c', 'c');
   }
 }
 
