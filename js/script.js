@@ -69,10 +69,13 @@ let sett = true;
 const ourWorksBlock = $('#our-works');
 
 const logoSite = $('.logo-header');
+const btnToTop = $('.btn-to-top');
+
 
 $(window).on('scroll', function (e){
     const scrollTop = $(e.target).scrollTop();
     eventLogo(scrollTop);
+    btnTop(scrollTop);
     if(scrollTop > ourWorksBlock.offset().top - 300 && sett){
         startNumberAnimation();
         sett = false;
@@ -83,7 +86,17 @@ $(window).on('scroll', function (e){
 $(window).on('load', function (e){
     const scrollTop = $(e.target).scrollTop();
     eventLogo(scrollTop);
+    btnTop(scrollTop);
 })
+
+
+function btnTop(scrollTop){
+    if(scrollTop > 200){
+        btnToTop.addClass(active);
+    } else {
+        btnToTop.removeClass(active);
+    }
+}
 
 
 function eventLogo(scrollTop){
@@ -93,6 +106,10 @@ function eventLogo(scrollTop){
         logoSite.children('.logo-closed-symbol').removeClass('close');
     }
 }
+
+btnToTop.on('click', function (){
+    $(window).scrollTop(0);
+})
 
 function startNumberAnimation(){
     const numberAnimation = $('.number-animation');

@@ -566,7 +566,28 @@ header{
 @mixin imgHover(){
   transition: 0.3s;
   &:hover{
+    z-index: 10;
     transform: scale(1.05);
+  }
+}
+
+@mixin preview(){
+  position: relative;
+  &:after{
+    content: "\f06e";
+    position: absolute;
+    font-size: 1.25rem;
+    color: #fff;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    font-family: 'FontAwesome', serif;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover{
+    &:after{
+      opacity: 1;
+    }
   }
 }
 
@@ -575,6 +596,7 @@ header{
   height: 15.625rem;
   @include bg;
   @include imgHover;
+  @include preview;
 }
 
 .max-img{
@@ -582,6 +604,7 @@ header{
   height: 31.25rem;
   @include bg;
   @include imgHover;
+  @include preview;
 }
 
 .max-min{
@@ -589,6 +612,7 @@ header{
   height: 15.625rem;
   @include bg;
   @include imgHover;
+  @include preview;
 }
 
 .our-works-blocks{
@@ -980,5 +1004,21 @@ footer{
   }
   textarea{
     width: 100% !important;
+  }
+}
+
+.btn-to-top{
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: $c-green;
+  color: #fff;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  transition: 0.3s;
+  opacity: 0;
+  &.active{
+    opacity: 1;
   }
 }
