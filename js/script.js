@@ -70,6 +70,7 @@ const ourWorksBlock = $('#our-works');
 
 const logoSite = $('.logo-header');
 const btnToTop = $('.btn-to-top');
+const btnCall = $('.btn-fix-call');
 
 
 $(window).on('scroll', function (e){
@@ -93,8 +94,10 @@ $(window).on('load', function (e){
 function btnTop(scrollTop){
     if(scrollTop > 200){
         btnToTop.addClass(active);
+        btnCall.addClass(active);
     } else {
         btnToTop.removeClass(active);
+        btnCall.removeClass(active);
     }
 }
 

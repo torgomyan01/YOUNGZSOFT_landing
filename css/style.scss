@@ -1009,16 +1009,91 @@ footer{
 
 .btn-to-top{
   position: fixed;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: $c-green;
   color: #fff;
-  right: 1.875rem;
-  bottom: 1.875rem;
+  right: 30px;
+  bottom: 30px;
   transition: 0.3s;
   opacity: 0;
   &.active{
     opacity: 1;
   }
+}
+
+.btn-fix-call{
+  position: fixed;
+  min-inline-size: 40px;
+  height: 40px;
+  border-radius: 1.875rem;
+  background: $c-green;
+  color: #fff;
+  right: 30px;
+  bottom: 30px;
+  transition: 0.3s;
+  @include flex('c', 'c');
+  animation: play 2s ease infinite;
+  &.active{
+    right: 78px;
+  }
+  &:hover{
+    color: #fff;
+    span{
+      max-width: 200px;
+      margin-left: 5px;
+    }
+  }
+  i{
+    transition: 0.3s;
+    animation: call 2s infinite;
+  }
+  span{
+    transition: 0.3s;
+    max-width: 0;
+    overflow: hidden;
+    display: block;
+    margin-left: 0;
+  }
+}
+
+
+@keyframes play {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.4), 0 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+
+}
+
+@keyframes call {
+  0%{}
+  2.5%{
+    transform: translateX(0%);
+  }
+  5%{
+    transform: translateX(-30%);
+  }
+  7.5%{
+    transform: translateX(30%);
+  }
+  10%{
+    transform: translateX(10%);
+  }
+  15%{
+    transform: translateX(-10%);
+  }
+  20%{
+    transform: translateX(5%);
+  }
+  100%{}
 }
