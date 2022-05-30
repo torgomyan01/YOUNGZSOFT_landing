@@ -450,8 +450,12 @@ header{
     -ms-flex-align: center;
     align-items: center;
     height: 4.0625rem;
+    transition: 0.3s;
     @media (max-width: $sm) {
       font-size: 2rem;
+    }
+    &.hide{
+      opacity: 0;
     }
     span{
       overflow: hidden;

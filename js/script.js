@@ -126,9 +126,11 @@ menuSite.on('click', function (){
     const parent = $(this).parent();
     if(parent.hasClass(active)){
         parent.removeClass(active);
+        logoSite.removeClass('hide')
         $(this).html('<i class="fa-solid fa-bars"></i>');
     } else {
         parent.addClass(active);
+        logoSite.addClass('hide')
         $(this).html('<i class="fa-solid fa-xmark"></i>');
     }
 })
