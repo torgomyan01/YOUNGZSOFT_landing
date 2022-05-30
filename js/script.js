@@ -14,6 +14,14 @@ $('#reviews').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
 });
 
 $('.partners-block').slick({
@@ -25,17 +33,68 @@ $('.partners-block').slick({
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 5000,
+    responsive: [
+        {
+            breakpoint: 1240,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 420,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }
+    ]
 });
 
 let sett = true;
 const ourWorksBlock = $('#our-works');
-$(window).on('scroll', function (e){
 
-    if($(e.target).scrollTop() > ourWorksBlock.offset().top - 200 && sett){
+const logoSite = $('.logo-header');
+
+$(window).on('scroll', function (e){
+    const scrollTop = $(e.target).scrollTop();
+    eventLogo(scrollTop);
+
+
+    if(scrollTop > ourWorksBlock.offset().top - 300 && sett){
         startNumberAnimation();
         sett = false;
     }
 })
+
+
+$(window).on('load', function (e){
+    const scrollTop = $(e.target).scrollTop();
+    eventLogo(scrollTop);
+})
+
+
+function eventLogo(scrollTop){
+    if(scrollTop > 200){
+        logoSite.children('.logo-closed-symbol').addClass('close')
+    } else {
+        logoSite.children('.logo-closed-symbol').removeClass('close')
+    }
+}
 
 function startNumberAnimation(){
     const numberAnimation = $('.number-animation');
@@ -43,27 +102,18 @@ function startNumberAnimation(){
         const _elem = $(elem);
         const maxCount = +_elem.text();
         const time = _elem.data('time') ? +_elem.data('time') : 5;
-
         const ms = time * 50;
-
         const secCount = maxCount / ms;
-
         let num = 0;
 
-
         const interval = setInterval(() => {
-
             num += secCount;
-
             _elem.text(num.toFixed());
-
             if(num > maxCount){
                 clearInterval(interval)
             }
         }, 1)
 
-
-        console.log(maxCount, time)
     })
 }
 

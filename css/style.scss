@@ -393,12 +393,12 @@ option{
   height: auto;
   background: rgba(28, 155, 85, 0.7);
   backdrop-filter: blur(25px);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0 10px 0;
   position: fixed;
   left: 0;
   transform: translateX(-100%);
   transition: 0.3s;
-  top: 20%;
+  top: 2rem;
   z-index: 100;
   &.active{
     transform: translateX(0);
@@ -414,7 +414,7 @@ option{
     position: absolute;
     right: 0;
     transform: translateX(100%);
-    top: 2rem;
+    top: 0;
     font-size: 2.875rem;
     color: #fff;
     padding: 0 10px;
@@ -430,6 +430,47 @@ header{
   @include bg;
   background-image: url(../images/header-bg.jpg);
   position: relative;
+  .logo-header{
+    position: fixed;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    left: 4.0625rem;
+    top: 2rem;
+    background: #1c9b55d6;
+    padding: 0.1875rem 0.625rem;
+    border-radius: 0.625rem;
+    backdrop-filter: blur(25px);
+    z-index: 10;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 4.0625rem;
+    @media (max-width: $sm) {
+      font-size: 2rem;
+    }
+    span{
+      overflow: hidden;
+      font-weight: 700;
+      letter-spacing: -0px;
+      transition: 0.3s;
+      display: block;
+      max-width: 3.125rem;
+      &.logo-closed-symbol{
+        @media (max-width: $md) {
+          max-width: 0 !important;
+        }
+      }
+      &.close{
+        //font-size: 0;
+        max-width: 0;
+      }
+    }
+  }
   .solid__one{
     width: 30%;
     height: 100%;
@@ -438,6 +479,13 @@ header{
     left: 48%;
     position: absolute;
     transform: translateX(-50%);
+    @media (max-width: $xl){
+      width: 35%;
+      left: 40%;
+    }
+    @media (max-width: $lg){
+      display: none;
+    }
   }
   .solid__two{
     width: 30%;
@@ -447,6 +495,13 @@ header{
     left: 52%;
     position: absolute;
     transform: translateX(-50%);
+    @media (max-width: $xl){
+      width: 35%;
+      left: 44%;
+    }
+    @media (max-width: $lg){
+      display: none;
+    }
   }
   .menu{
     position: absolute;
@@ -460,15 +515,37 @@ header{
     text-align: right;
     padding-right: 1.25rem;
     @include flex('e', 'c');
+    @media (max-width: $xl){
+      width: 60%;
+    }
+    @media (max-width: $lg){
+      width: 95%;
+    }
+    @media (max-width: $sm){
+      width: 100%;
+      clip-path: unset;
+    }
     .info-block{
       position: absolute;
       top: 1.875rem;
       right: 1.25rem;
+      @media (max-width: $sm){
+        right: unset;
+        top: 8.875rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 
   .header-body{
     width: 70%;
+    @media (max-width: $sm){
+      width: 100%;
+      padding: 0.9375rem;
+    }
   }
 }
 
@@ -525,6 +602,9 @@ header{
     &:hover{
       animation-play-state: paused;
     }
+    @media (max-width: $md){
+      animation-duration: 220s;
+    }
   }
 }
 
@@ -558,8 +638,8 @@ header{
 
 .next-slider, .prev-slider{
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border: 0;
   border-radius: 50%;
   background: #1c9b55ed;
@@ -568,14 +648,26 @@ header{
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
+  @media (max-width: $md){
+    top: 100%;
+    transform: translateY(50%);
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }
 .next-slider{
-  right: -70px;
+  right: -4.375rem;
+  @media (max-width: $md){
+    right: 0;
+  }
 }
 
 
 .prev-slider{
-  left: -70px;
+  left: -4.375rem;
+  @media (max-width: $md){
+    left: 0;
+  }
 }
 
 .reviews{
@@ -607,6 +699,12 @@ header{
     height: 100%;
     background: rgba(28, 155, 85, 0.5);
     backdrop-filter: blur(25px);
+    @media (max-width: $xl){
+      width: 80%;
+    }
+    @media (max-width: $md){
+      width: 100%;
+    }
     form{
       width: 100%;
       max-width: 25rem;
@@ -614,16 +712,36 @@ header{
   }
   &.right{
     @include flex('e', 'c');
+    @media (max-width: $md){
+      @include flex('c', 'c');
+    }
   }
   .left-green{
     padding: 1.875rem 1.875rem 1.875rem 6.375rem;
     @include flex('s', 'c');
     clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    @media (max-width: $md){
+      clip-path: unset;
+      @include flex('c', 'c');
+      padding: 1.875rem;
+    }
   }
   .right-green{
     padding: 1.875rem 6.875rem 1.875rem 1.375rem;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
     @include flex('e', 'c');
+    @media (max-width: $md){
+      clip-path: unset;
+      padding: 1.875rem;
+      @include flex('c', 'c');
+    }
+  }
+}
+
+.need-help{
+  width: 70%;
+  @media (max-width: $md){
+    width: 100%;
   }
 }
 
@@ -791,7 +909,14 @@ header{
 }
 
 .h-755{
-  height: 47.1875rem;
+  min-height: 47.1875rem;
+}
+
+.price-max{
+  transform: scale(1.15);
+  @media (max-width: $xl){
+    transform: scale(1);
+  }
 }
 
 footer{
