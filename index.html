@@ -15,6 +15,7 @@
         rel="stylesheet">
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <link rel="stylesheet" href="css/helper.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -24,6 +25,12 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <script type="module">
+      import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.esm.js";
+
+      console.log(Fancybox)
+  </script>
 
   <title>YOUNGZSOFT Landing</title>
 </head>
@@ -204,10 +211,27 @@
 
 <!--    one-->
     <div class="d-flex justify-content-center align-items-center flex-column">
-      <div class="min-img" style="background-image: url(images/slider/1.png)"></div>
-      <div class="min-img" style="background-image: url(images/slider/2.png)"></div>
+      <a
+          href="images/slider/1.png"
+          data-fancybox="gallery"
+          data-caption="Optional caption"
+      >
+        <div class="min-img" style="background-image: url(images/slider/1.png)"></div>
+      </a>
+      <a
+          href="images/slider/2.png"
+          data-fancybox="gallery"
+          data-caption="Optional caption"
+      >
+        <div class="min-img" style="background-image: url(images/slider/2.png)"></div>
+      </a>
     </div>
-    <div class="max-img" style="background-image: url(images/slider/3.png)"></div>
+    <a
+        href="images/slider/3.png"
+        data-fancybox="gallery"
+    >
+      <div class="max-img" style="background-image: url(images/slider/3.png)"></div>
+    </a>
     <div class="d-flex justify-content-start align-items-start flex-column">
       <div class="d-flex justify-content-start">
         <div class="min-img" style="background-image: url(images/slider/4.png)"></div>
