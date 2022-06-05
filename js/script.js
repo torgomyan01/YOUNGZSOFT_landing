@@ -5,6 +5,37 @@ const {active, none, fix} = {
 }
 
 
+
+let sett = true;
+const ourWorksBlock = $('#our-works');
+
+const logoSite = $('.logo-header');
+const btnToTop = $('.btn-to-top');
+const btnCall = $('.btn-fix-call');
+
+
+$(window).on('scroll', function (e){
+    const scrollTop = $(e.target).scrollTop();
+    eventLogo(scrollTop);
+    btnTop(scrollTop);
+    if(scrollTop > ourWorksBlock.offset().top - 300 && sett){
+        startNumberAnimation();
+        sett = false;
+    }
+})
+
+
+$(window).on('load', function (e){
+    const scrollTop = $(e.target).scrollTop();
+    eventLogo(scrollTop);
+    btnTop(scrollTop);
+
+
+    startConvertImage();
+
+})
+
+
 $('#reviews').slick({
     dots: true,
     prevArrow: `<button class="prev-slider"><i class="fas fa-chevron-left"></i></button>`,
@@ -65,31 +96,6 @@ $('.partners-block').slick({
     ]
 });
 
-let sett = true;
-const ourWorksBlock = $('#our-works');
-
-const logoSite = $('.logo-header');
-const btnToTop = $('.btn-to-top');
-const btnCall = $('.btn-fix-call');
-
-
-$(window).on('scroll', function (e){
-    const scrollTop = $(e.target).scrollTop();
-    eventLogo(scrollTop);
-    btnTop(scrollTop);
-    if(scrollTop > ourWorksBlock.offset().top - 300 && sett){
-        startNumberAnimation();
-        sett = false;
-    }
-})
-
-
-$(window).on('load', function (e){
-    const scrollTop = $(e.target).scrollTop();
-    eventLogo(scrollTop);
-    btnTop(scrollTop);
-})
-
 
 function btnTop(scrollTop){
     if(scrollTop > 200){
@@ -139,7 +145,6 @@ function startNumberAnimation(){
 
 
 const menuSite = $('#menu-site');
-
 menuSite.on('click', function (){
     const parent = $(this).parent();
     if(parent.hasClass(active)){
@@ -186,3 +191,49 @@ defaultInput.next('.password').on('click', function (){
 })
 
 // -------------- FOR DEFAULT INPUT FUNCTION -------------------
+
+allStyleImagesArr = [];
+const allStyleImages = $('*[data-style-image]');
+allStyleImages.map((index, elem) => {
+    const _elem = $(elem);
+    const imageLink = _elem.data('style-image').replace(/ /g, '');
+    allStyleImagesArr.push({
+        elem: elem,
+        url: `images/${imageLink}`
+    })
+    _elem.removeAttr('data-style-image');
+})
+
+function startConvertImage(){
+    allStyleImagesArr.forEach((arr) => {
+        const _elem = $(arr.elem);
+        _elem.css('background-image', `url(${arr.url})`);
+        _elem.removeAttr('data-style-image');
+    })
+}
+
+
+const siteForms = $('form.site-form');
+const thanksModal = new bootstrap.Modal(document.getElementById('thanksModal'), {
+    keyboard: false
+})
+
+
+siteForms.on('submit', function (e){
+    e.preventDefault();
+    const thisForm = $(this);
+
+
+    $.ajax({
+        type: "POST",
+        url: '../form.php',
+        data: thisForm.serialize(),
+        dataType: "html",
+        success: function(response){
+            if(response === '1'){
+                thanksModal.show()
+            }
+        }
+    });
+})
+

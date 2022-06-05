@@ -7,6 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <script type="module">
+      import { Fancybox } from './js/fancybox.esm.js';
+  </script>
+
   <!--  Styles -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +29,13 @@
   <link rel="stylesheet" href="css/helper.css">
   <link rel="stylesheet" href="css/style.css">
 
-
-  <!--  scripts -->
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-
-  <script type="module">
-    import { Fancybox } from './js/fancybox.esm.js';
-  </script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <title>YOUNGZSOFT Landing</title>
+
+
 </head>
 <body>
-
 
 <div class="menu-site">
   <div class="open-close" id="menu-site">
@@ -66,7 +68,7 @@
 </div>
 
 
-<header>
+<header data-style-image="header-bg.jpg">
 
   <a href="/" class="logo-header">
 <!--    YOUNGZSOFT-->
@@ -95,9 +97,9 @@
         </a>
       </p>
       <p class="mt-2">
-        <a href="tel:+ 8 800 000 00 00" class="c-while fs20">
+        <a href="tel:+79285168866" class="c-while fs20">
           <i class="fa-solid fa-phone me-2"></i>
-          + 8 800 000 00 00
+          +79285168866
         </a>
       </p>
     </div>
@@ -211,31 +213,31 @@
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center">
         <a href="images/slider/1.png" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/1.png)"></div>
+          <div class="min-img"  data-style-image="slider/1.png"></div>
         </a>
         <a href="images/slider/2.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/2.jpg)"></div>
+          <div class="min-img" data-style-image="slider/2.jpg"></div>
         </a>
       </div>
       <a href="images/slider/3.jpg" data-fancybox="gallery" >
-        <div class="max-min" style="background-image: url(images/slider/3.jpg)"></div>
+        <div class="max-min" data-style-image="slider/3.jpg"></div>
       </a>
     </div>
 
     <a href="images/slider/4.png" data-fancybox="gallery" >
-      <div class="max-img" style="background-image: url(images/slider/4.png)"></div>
+      <div class="max-img" data-style-image="slider/4.png"></div>
     </a>
 
     <div class="d-flex justify-content-start align-items-start flex-column">
       <a href="images/slider/5.jpg" data-fancybox="gallery" >
-        <div class="max-min" style="background-image: url(images/slider/5.jpg)"></div>
+        <div class="max-min" data-style-image="slider/5.jpg"></div>
       </a>
       <div class="d-flex justify-content-start">
         <a href="images/slider/6.png" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/6.png)"></div>
+          <div class="min-img" data-style-image="slider/6.png"></div>
         </a>
         <a href="images/slider/7.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/7.jpg)"></div>
+          <div class="min-img" data-style-image="slider/7.jpg"></div>
         </a>
       </div>
     </div>
@@ -243,18 +245,18 @@
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-start">
         <a href="images/slider/8.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/8.jpg)"></div>
+          <div class="min-img" data-style-image="slider/8.jpg"></div>
         </a>
         <a href="images/slider/9.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/9.jpg)"></div>
+          <div class="min-img" data-style-image="slider/9.jpg"></div>
         </a>
       </div>
       <div class="d-flex justify-content-start">
         <a href="images/slider/10.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/10.jpg)"></div>
+          <div class="min-img" data-style-image="slider/10.jpg"></div>
         </a>
         <a href="images/slider/11.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/11.jpg)"></div>
+          <div class="min-img" data-style-image="slider/11.jpg"></div>
         </a>
       </div>
     </div>
@@ -262,57 +264,57 @@
     <!--    one-->
 
     <a href="images/slider/12.jpg" data-fancybox="gallery" >
-      <div class="max-img" style="background-image: url(images/slider/12.jpg)"></div>
+      <div class="max-img" data-style-image="slider/12.jpg"></div>
     </a>
 
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center">
         <a href="images/slider/13.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/13.jpg)"></div>
+          <div class="min-img" data-style-image="slider/13.jpg"></div>
         </a>
         <a href="images/slider/14.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/14.jpg)"></div>
+          <div class="min-img" data-style-image="slider/14.jpg"></div>
         </a>
       </div>
       <a href="images/slider/15.jpg" data-fancybox="gallery" >
-        <div class="max-min" style="background-image: url(images/slider/15.jpg)"></div>
+        <div class="max-min" data-style-image="slider/15.jpg"></div>
       </a>
     </div>
 
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-start">
         <a href="images/slider/16.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/16.jpg)"></div>
+          <div class="min-img" data-style-image="slider/16.jpg"></div>
         </a>
         <a href="images/slider/17.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/17.jpg)"></div>
+          <div class="min-img" data-style-image="slider/17.jpg"></div>
         </a>
       </div>
       <div class="d-flex justify-content-start">
         <a href="images/slider/18.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/18.jpg)"></div>
+          <div class="min-img" data-style-image="slider/18.jpg"></div>
         </a>
         <a href="images/slider/19.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/19.jpg)"></div>
+          <div class="min-img" data-style-image="slider/19.jpg"></div>
         </a>
       </div>
     </div>
 
     <a href="images/slider/20.jpg" data-fancybox="gallery" >
-      <div class="max-img" style="background-image: url(images/slider/20.jpg)"></div>
+      <div class="max-img" data-style-image="slider/20.jpg"></div>
     </a>
 
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center">
         <a href="images/slider/21.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/21.jpg)"></div>
+          <div class="min-img" data-style-image="slider/21.jpg"></div>
         </a>
         <a href="images/slider/22.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/22.jpg)"></div>
+          <div class="min-img" data-style-image="slider/22.jpg"></div>
         </a>
       </div>
       <a href="images/slider/25.jpg" data-fancybox="gallery" >
-        <div class="max-min" style="background-image: url(images/slider/25.jpg)"></div>
+        <div class="max-min" data-style-image="slider/25.jpg"></div>
       </a>
     </div>
 
@@ -321,18 +323,18 @@
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-start">
         <a href="images/slider/26.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/26.jpg)"></div>
+          <div class="min-img" data-style-image="slider/26.jpg"></div>
         </a>
         <a href="images/slider/27.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/27.jpg)"></div>
+          <div class="min-img" data-style-image="slider/27.jpg"></div>
         </a>
       </div>
       <div class="d-flex justify-content-start">
         <a href="images/slider/28.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/28.jpg)"></div>
+          <div class="min-img" data-style-image="slider/28.jpg"></div>
         </a>
         <a href="images/slider/29.jpg" data-fancybox="gallery" >
-          <div class="min-img" style="background-image: url(images/slider/29.jpg)"></div>
+          <div class="min-img" data-style-image="slider/29.jpg"></div>
         </a>
       </div>
     </div>
@@ -348,7 +350,7 @@
 
     <div class="d-flex">
       <a href="#">
-        <div class="review-avatars" style="background-image: url(images/users/user1.png);"></div>
+        <div class="review-avatars" data-style-image="users/user1.png"></div>
       </a>
       <div class="bgc-block-grey p-3 pb-5 border-radius-10 d-inline-block w-85 position-relative">
         <h4 class="fw-bold">
@@ -370,7 +372,7 @@
 
     <div class="d-flex">
       <a href="#">
-        <div class="review-avatars" style="background-image: url(images/users/user2.png);"></div>
+        <div class="review-avatars" data-style-image="users/user2.png"></div>
       </a>
       <div class="bgc-block-grey p-3 pb-5 border-radius-10 d-inline-block w-85 position-relative">
         <h4 class="fw-bold">
@@ -391,7 +393,7 @@
 
     <div class="d-flex">
       <a href="https://instagram.com/inplay_degunino?igshid=YmMyMTA2M2Y=">
-        <div class="review-avatars" style="background-image: url(images/users/murad.png);"></div>
+        <div class="review-avatars" data-style-image="users/murad.png"></div>
       </a>
       <div class="bgc-block-grey p-3 pb-5 border-radius-10 d-inline-block w-85 position-relative">
         <h4 class="fw-bold">
@@ -412,7 +414,7 @@
 
     <div class="d-flex">
       <a href="https://www.instagram.com/ultimatearena.club/">
-        <div class="review-avatars" style="background-image: url(images/users/abdulaziz.jpg);"></div>
+        <div class="review-avatars" data-style-image="users/abdulaziz.jpg"></div>
       </a>
       <div class="bgc-block-grey p-3 pb-5 border-radius-10 d-inline-block w-85 position-relative">
         <h4 class="fw-bold">
@@ -438,20 +440,21 @@
 <h1 class="fs40 fs50-sm text-center c-block fw-bold text-uppercase mb-5 mt-120">МОЖЕТЕ ОСТАВИТЬ ЗАЯВКУ </h1>
 
 
-<div class="form-block" style="background-image: url(images/form-bg-1.jpg)">
+<div class="form-block" data-style-image="form-bg-1.jpg">
   <div class="left-green">
-    <form action="#">
+    <form action="#" class="site-form" method="post">
+      <input type="hidden" name="type" value="МОЖЕТЕ ОСТАВИТЬ ЗАЯВКУ">
       <label class="def-input">
         <span>Ваше имя  </span>
         <input type="text" name="name">
       </label>
       <label class="def-input">
         <span>Ваше Email </span>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
       </label>
       <label class="def-input">
         <span>Номер телефона </span>
-        <input type="text" data-mask="+7 (000) 000 - 00 - 00" name="number_phone">
+        <input type="text" name="number_phone" required>
       </label>
       <div class="d-flex justify-content-center justify-content-ms-start align-items-center">
         <button class="def-btn mt-4">Оставить заявку</button>
@@ -541,29 +544,32 @@
 </h3>
 
 
-<div class="form-block right" style="background-image: url(images/form-2.jpg)">
+<div class="form-block right" data-style-image="form-2.jpg">
   <div class="right-green">
-    <form action="#">
+    <form action="#" method="post" class="site-form">
+      <input type="hidden" name="type" value="ЕСТЬ ВОПРОСЫ?">
       <label class="def-input">
         <span>Ваше имя  </span>
         <input type="text" name="name">
       </label>
       <label class="def-input">
         <span>Ваше Email </span>
-        <input type="text" name="email">
+        <input type="text" name="email" required>
       </label>
       <label class="def-input">
         <span>Номер телефона </span>
-        <input type="text" name="number_phone" data-mask="+7 (000) 000 - 00 - 00">
+        <input type="text" name="number_phone" required>
       </label>
       <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
-        <button class="def-btn mt-4">Оставить заявку</button>
+        <button type="submit" class="def-btn mt-4">Оставить заявку</button>
       </div>
       <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
-        <button class="green-btn mt-3" style="width: 240px;">
-          <i class="fa-brands fa-whatsapp me-2 fs30"></i>
-          или звоните
-        </button>
+        <a href="https://Wa.me/79285168866" target="_blank">
+          <span class="green-btn mt-3" style="width: 240px;">
+            <i class="fa-brands fa-whatsapp me-2 fs30"></i>
+            или звоните
+          </span>
+        </a>
       </div>
     </form>
   </div>
@@ -667,23 +673,24 @@
   Запишитесь на бесплатную консультацию или просто наберите нас
 </h3>
 
-<div class="form-block" style="background-image: url(images/form-bg-1.jpg)">
+<div class="form-block" data-style-image="form-bg-1.jpg">
   <div class="left-green">
-    <form action="#">
+    <form action="#" method="post" class="site-form">
+      <input type="hidden" name="type" value="Оставьте заявку">
       <label class="def-input">
         <span>Ваше имя  </span>
         <input type="text" name="name">
       </label>
       <label class="def-input">
         <span>Ваше Email </span>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
       </label>
       <label class="def-input">
         <span>Номер телефона </span>
-        <input type="text" name="phone_number" data-mask="+7 (000) 000 - 00 - 00">
+        <input type="text" name="phone_number" required>
       </label>
       <label class="mt-3">
-        <textarea name="" cols="60" rows="5" class="def-textarea" placeholder="Опишите задачу / проблему или задайте вопрос..."></textarea>
+        <textarea name="message" cols="60" rows="5" class="def-textarea" placeholder="Опишите задачу / проблему или задайте вопрос..."></textarea>
       </label>
       <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
         <button class="def-btn mt-4">Оставить заявку</button>
@@ -759,7 +766,7 @@
 </div>
 
 
-<div class="form-block right mt-50" style="background-image: url(images/form-2.jpg)">
+<div class="form-block right mt-50" data-style-image="form-2.jpg">
   <div class="right-green flex-column pe-4 need-help">
     <h1 class="fs40 fs50-sm c-while text-uppercase text-center">Нужна помощь?</h1>
     <div class="d-flex justify-content-between mt-30">
@@ -770,23 +777,27 @@
       или
     </div>
     <div>
-      <button class="green-btn" style="width: 200px">
-        <i class="fa-solid fa-phone fs30 me-2"></i>
-        Позвонить
-      </button>
+      <a href="tel:+79285168866">
+        <button class="green-btn" style="width: 200px">
+          <i class="fa-solid fa-phone fs30 me-2"></i>
+          Позвонить
+        </button>
+      </a>
     </div>
     <div class="mt-3 mb-80">
-      <button class="green-btn" style="width: 200px">
-        <i class="fa-brands fa-whatsapp fs30 me-2"></i>
-        Whatsapp
-      </button>
+      <a href="https://Wa.me/79285168866" target="_blank">
+        <button class="green-btn" style="width: 200px">
+          <i class="fa-brands fa-whatsapp fs30 me-2"></i>
+          Whatsapp
+        </button>
+      </a>
     </div>
   </div>
 </div>
 
 <h1 class="fs40 fs50-sm text-center fw-bold text-uppercase c-red mt-120">подбор железа</h1>
 
-<div class="sales mt-50" style="background-image: url(images/form-2.jpg)">
+<div class="sales mt-50" data-style-image="form-2.jpg">
   <div class="solid">
     <div class="container">
       <h1 class="fs26 text-center fw-light c-while text-uppercase">КОМПЬЮТЕРНАЯ ТЕХНИКА И ПЕРИФЕРИЯ ОПТОМ</h1>
@@ -1043,21 +1054,22 @@
         <h1 class="c-while text-uppercase fw-bold fs24 fs30-sm text-center">
           Напишите вопрос, который волнует вас больше всего
         </h1>
-        <form action="#" class="modal-form mt-40">
+        <form action="#" class="modal-form mt-40 site-form" method="post">
+          <input type="hidden" name="type" value="Напишите вопрос, который волнует вас больше всего">
           <label class="def-input">
             <span>Ваше имя  </span>
             <input type="text" name="name">
           </label>
           <label class="def-input">
             <span>Ваше Email </span>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
           </label>
           <label class="def-input">
             <span>Номер телефона </span>
-            <input type="text" name="number_phone" data-mask="+7 (000) 000 - 00 - 00">
+            <input type="text" name="number_phone" required>
           </label>
           <label class="mt-3 w-100">
-            <textarea name="" cols="60" rows="5" class="def-textarea" placeholder="Опишите задачу / проблему или задайте вопрос..." data-lt-tmp-id="lt-205030" spellcheck="false" data-gramm="false"></textarea>
+            <textarea name="message" cols="60" rows="5" class="def-textarea" placeholder="Опишите задачу / проблему или задайте вопрос..." data-lt-tmp-id="lt-205030" spellcheck="false" data-gramm="false"></textarea>
           </label>
           <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
             <button class="def-btn mt-4">Отправить</button>
@@ -1081,21 +1093,22 @@
         <h1 class="c-while text-uppercase fw-bold fs24 fs30-sm text-center">
           Пожалуйста, напишите ваш вопрос, мы обязательно найдем решение
         </h1>
-        <form action="#" class="modal-form mt-40">
+        <form action="#" class="modal-form mt-40 site-form" method="post">
+          <input type="hidden" name="type" value="Пожалуйста, напишите ваш вопрос, мы обязательно найдем решение">
           <label class="def-input">
             <span>Ваше имя  </span>
             <input type="text" name="name">
           </label>
           <label class="def-input">
             <span>Ваше Email </span>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
           </label>
           <label class="def-input">
             <span>Номер телефона </span>
-            <input type="text" name="number_phone" data-mask="+7 (000) 000 - 00 - 00">
+            <input type="text" name="number_phone" required>
           </label>
           <label class="mt-3 w-100">
-            <textarea name="" cols="60" rows="5" class="def-textarea" placeholder="Опишите задачу / проблему или задайте вопрос..." data-lt-tmp-id="lt-205030" spellcheck="false" data-gramm="false"></textarea>
+            <textarea name="message" cols="60" rows="5" class="def-textarea" placeholder="Опишите задачу / проблему или задайте вопрос..." data-lt-tmp-id="lt-205030" spellcheck="false" data-gramm="false"></textarea>
           </label>
           <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
             <button class="def-btn mt-4">Отправить</button>
@@ -1118,10 +1131,11 @@
         <h1 class="c-while text-uppercase fw-bold fs24 fs30-sm text-center mb-40">
           Введите ваше номер телефона и мы перезвоним вам в течение 1 минуты
         </h1>
-        <form action="#" class="modal-form">
+        <form action="#" class="modal-form site-form" method="post">
+          <input type="hidden" name="type" value="Заказать звонок">
           <label class="def-input">
             <span>Ваше номер телефона </span>
-            <input type="text" name="phone-number" data-mask="+7 (000) 000 - 00 - 00">
+            <input type="text" name="number_phone" required>
           </label>
 
           <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
@@ -1134,18 +1148,39 @@
 </div>
 
 
+<div class="modal fade" id="thanksModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-end">
+          <span class="fs40 c-while cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-regular fa-xmark"></i>
+          </span>
+        </div>
+        <h1 class="c-while text-uppercase fw-bold fs24 fs30-sm text-center mb-40">
+          Спасибо мы скоро свяжемся с вами
+        </h1>
+        <div class="d-flex justify-content-center justify-content-sm-center align-items-center">
+          <button class="def-btn mt-4" data-bs-dismiss="modal" aria-label="Close">ОК</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <button class="btn btn-to-top">
   <i class="fa-solid fa-chevron-up"></i>
 </button>
 
-<a href="tel:800 000 00 00" class="btn btn-fix-call">
+<a href="tel:+79285168866" class="btn btn-fix-call">
   <i class="fa-solid fa-phone"></i>
   <span>
     Позвонить
   </span>
 </a>
 
-<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery.mask.min.js"></script>-->
 
 <!--<script type="text/javascript" src="js/text-writer.js"></script>-->
 <script src="js/script.js"></script>

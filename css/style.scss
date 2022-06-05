@@ -423,12 +423,61 @@ option{
   }
 }
 
+//.preloader{
+//  width: 100%;
+//  height: 100vh;
+//  background: #000000e8;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  position: fixed;
+//  z-index: 1000;
+//  backdrop-filter: blur(25px);
+//}
+//
+//
+///* preloader-android */
+//svg.preloader-android {
+//  width: 3.75em;
+//  transform-origin: center;
+//  animation: rotate 2s linear infinite;
+//
+//}
+//svg.preloader-android circle {
+//  fill: none;
+//  stroke: #fff;
+//  stroke-width: 2;
+//  stroke-dasharray: 1, 200;
+//  stroke-dashoffset: 0;
+//  stroke-linecap: round;
+//  animation: dash 1.5s ease-in-out infinite;
+//}
+//
+//@keyframes rotate {
+//  100% {
+//    transform: rotate(360deg);
+//  }
+//}
+//
+//@keyframes dash {
+//  0% {
+//    stroke-dasharray: 1, 200;
+//    stroke-dashoffset: 0;
+//  }
+//  50% {
+//    stroke-dasharray: 90, 200;
+//    stroke-dashoffset: -35px;
+//  }
+//  100% {
+//    stroke-dashoffset: -125px;
+//  }
+//}
+
 header{
   width: 100%;
   height: 100vh;
   overflow: hidden;
   @include bg;
-  background-image: url(../images/header-bg.jpg);
   position: relative;
   .logo-header{
     position: fixed;
@@ -634,6 +683,9 @@ header{
       animation-duration: 220s;
     }
   }
+}
+.modal{
+  backdrop-filter: blur(0.625rem);
 }
 
 @keyframes work-gallery {
